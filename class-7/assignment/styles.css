@@ -1,0 +1,105 @@
+.headingfirst{
+    background-color: lightgray;
+    border-style: outset;   
+}
+
+
+.links{
+    background-color: rgb(99, 99, 253);
+}
+
+.links a{
+    color: white;
+}
+
+.ProductSearch{
+    background-color: #fdbb2d;
+}
+
+.ProductSearch input{
+    border-color: rgb(188, 122, 0);
+}
+
+.button{
+    background-color: rgb(188, 122, 0);
+    color: white;
+}
+
+.ProductTable{
+    border: 4px solid green;   
+}
+
+.TodaysHeading{
+    background-color: rgb(45, 250, 45);
+    color: white;
+}
+
+.allHeading{
+    background-color: green;
+    color: white;
+}
+
+.btn{
+    background-color: green;
+    color: white;
+}
+
+.Onefieldset{
+    border: 2px solid darkmagenta;
+}
+
+.PersonalInformation{
+    background-color: darkmagenta;
+    color: white;
+    border: darkmagenta;
+}
+
+
+.Twofieldset{
+    border: 2px solid darkmagenta;
+}
+
+
+.AccountDetails{
+    background-color: darkmagenta;
+    color: white;
+    border: darkmagenta;
+}
+
+.Threefieldset{
+    border: 2px solid darkmagenta;
+}
+
+.shippingAddress{
+    background-color: darkmagenta;
+    color: white;
+    border: darkmagenta;
+}
+
+.createAccount{
+    background-color: darkmagenta;
+    color: white;
+}
+
+.productionComp{
+    border: 2px solid rgb(254, 83, 48);
+}
+
+.Feature{
+    background-color: rgb(254, 83, 48);
+    color: white;
+}
+
+.colspan{
+    background-color: rgb(250, 180, 180);
+}
+
+.contactUS{
+    background-color: rgb(1, 12, 29);
+    color: white;
+}
+
+.Quick{
+    background-color: rgb(1, 12, 29);
+    color: white;
+}

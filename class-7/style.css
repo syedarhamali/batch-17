@@ -1,0 +1,78 @@
+/* .heading{
+    background-color: red;
+    line-height: 40px;
+    letter-spacing: 10px;
+    word-spacing: 30px;
+}
+
+.paragraph{
+    text-align: justify;
+} */
+/* 
+.heading{
+    font-size: 50px;
+    text-shadow: 10px 10px 0px red;
+}
+
+.heading::first-letter{
+    text-transform: uppercase;
+    font-size: 100px;
+    color: red;
+}
+
+.paragraph::first-line{
+    color: blue;
+}
+
+ul > li{
+    color: red;
+} */
+
+
+/* .parent{
+    text-align: center;
+}
+
+.paragraph::first-letter{
+    font-size: 50px;
+
+} */
+
+
+.paragraph{
+    /* border-width: 5px;
+    border-style: solid;
+    border-color: blue; */
+
+    border: 2px solid blue;
+    border-radius: 10px;
+}
+
+a:link{
+    color: red;
+}
+
+a:visited{
+    color: brown;
+}
+
+.paragraph:hover{
+    color: red;
+    cursor: pointer;
+}
+
+.paragraph:active{
+    background-color: black;
+}
+
+#my-input:hover{
+    background-color: blue;
+}
+
+#my-input:focus{
+    background-color: green;
+}
+
+#my-input:active{
+    background-color: red;
+}
