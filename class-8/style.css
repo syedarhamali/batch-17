@@ -1,0 +1,52 @@
+
+.main{
+    background-color: aqua;
+    height: 250px;
+    width:  70%;
+    min-width: 200px;
+    min-height: 100px;
+}
+
+.box{
+    height: 200px;
+    width: 60%;
+    background-color: red;
+    min-width: 200px;
+    max-width:450px;
+    overflow: scroll;
+    border: 1px solid black;
+    /* border-color: ;
+    border-style: ;
+    border-width: ; */
+}
+
+
+.content{
+    border: 1px solid black;
+    text-align: center;
+    /* padding: 5px 10px 5px 10px; */
+    padding: 3px 10px ;
+    margin-top: 10px;
+    /* margin: 10px 1px 3px 5px ; */
+}
+
+.box{
+    height: 100px;
+    width:  100px;
+    background-color: red;
+}
+ul li{
+    padding: 3px;
+    background-color: bisque;
+   display: inline-block; 
+}
+span{
+    display: block;
+}
+
+.coming-soon{
+    display: none;
+    /* visibility: hidden; */
+}
+
+
