@@ -1,0 +1,62 @@
+
+
+.content{
+    border: 1px solid black;
+    text-align: center;
+    padding: 3px 10px ;
+    margin-top: 10px;
+    border-image: url('./images.jpg') 11 11 11 11 stretch;
+}
+
+
+.submit{
+    margin-top: 10px;
+    padding: 10px 35px;
+    box-shadow: inset -7px -12px 12px 1px black;
+    border-radius: 30px 20px;
+}
+
+p{
+    text-align: justify;
+    color: blue;
+}
+ol{
+    list-style-type: lower-roman;
+    list-style-position: inside;
+}
+ul{
+    /* list-style-type: square; */
+    list-style-image: url('./images.jpg');
+}
+table{
+    border: 1px solid black;
+    empty-cells: hide;
+    /* border-spacing: 20px; */
+    border-collapse: collapse;
+}
+.r2> td{
+    background-color: bisque;
+}
+.col{
+    background-color: rgba(255, 0, 0, 0.422);
+}
+td{
+    border-bottom: 1px solid black;
+    padding: 5px 15px;
+}
+
+/* #p2{
+    color: blue;
+}
+ */
+p{
+    color: red !important;
+}
+
+
+/* positions */
+
+
+
+
+

@@ -1,0 +1,22 @@
+.absolute{
+    height: 200px;
+    width: 200px;
+    background-color: red;
+    position: absolute;
+    opacity: 0.5;
+    top: 10;
+    left: 15px;
+    /* left: ; */
+    /* bottom: ; */
+}
+
+.fixed{
+    height: 80px;
+    width: 80px;
+    background-color: rgba(41, 52, 255, 0.567);
+    border-radius: 50%;
+    text-align: center;
+    position: fixed;
+    top: 150px;
+    right: 30px;
+}
