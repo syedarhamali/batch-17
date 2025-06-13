@@ -1,0 +1,55 @@
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      position: relative;
+      width: 600px;
+      height: 1000px;
+      border: 2px solid #333;
+      margin: 50px auto;
+      background-color: #f9f9f9;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      color: white;
+      background-color: gray;
+      text-align: center;
+      line-height: 100px; /* Vertically center text */
+      font-weight: bold;
+      margin: 5px;
+    }
+
+    .box-a {
+      position: static; /* Default positioning */
+      background-color: #3498db;
+    }
+
+    .box-b {
+      position: relative; /* Relative to its normal position */
+      top: 30px;
+      left: 30px;
+      background-color: #e67e22;
+    }
+
+    .box-c {
+      position: absolute; /* Positioned relative to .container */
+      top: 0;
+      right: 0;
+      background-color: #2ecc71;
+    }
+
+    .box-d {
+      position: fixed; /* Fixed to viewport */
+      bottom: 10px;
+      left: 10px;
+      background-color: #9b59b6;
+    }
+
+    .box-e {
+      position: sticky; /* Sticks when scrolling */
+      top: 0;
+      background-color: #e74c3c;
+    }
