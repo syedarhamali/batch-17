@@ -1,0 +1,26 @@
+:root{
+    --primary-color : red;
+    --primary-width : 1000px
+}
+
+
+.flex-container{
+    display: flex;
+    /* width: 800px; */
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    /* gap: 10px; */
+}
+
+.red-text{     
+    color: red;
+}
+
+.box{
+    width: var(--primary-width);
+    height: var(--primary-width);
+    background-color: var(--primary-color);
+    border: 1px solid black;
+    font-size: 60px;
+    flex-shrink: 0;
+}
