@@ -1,3 +1,11 @@
+:root{
+    --primary-color : red;
+    --primary-width : 1000px
+}
+
+body{
+    background-color: var(--primary-color);
+}
 header{
     display: flex;
     justify-content: space-between;
@@ -32,6 +40,14 @@ header{
 }
 
 @media screen and (max-width: 768px){
+    :root{
+    --primary-color : blue;
+    --primary-width : 1000px
+}
+
+body{
+    background-color: var(--primary-color);
+}
     header{
         flex-direction: column;
     }
