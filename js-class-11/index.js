@@ -39,37 +39,46 @@ const quiz = [
 var currentQuestion = 0
 var score = 0
 var scoreElement = document.getElementById("score")
+var quizOptions = document.getElementById("quizOption")
+let currentSelection = null
+let nextQuestionButton = document.getElementById("nextQuestion")
 
 function renderQuestions(){
     var questionElement = document.getElementById("question")
     questionElement.innerHTML = quiz[currentQuestion].question
     
-    var quizOptions = document.getElementById("quizOption")
     
     quizOptions.innerHTML = ''
     for(var i = 0; i < quiz[currentQuestion].options.length ; i++){
-        quizOptions.innerHTML += `<li onclick="checkCorrect(event)" style="padding-bottom: 20px">${quiz[currentQuestion].options[i]}</li>`
+        quizOptions.innerHTML += `<li onclick="checkCorrect(event)" class="non-active" style="padding-bottom: 20px">${quiz[currentQuestion].options[i]}</li>`
     }
 }
 
 
 function goToNext(){
+    console.log(currentSelection)
+    if (quiz[currentQuestion].correctAnswer == currentSelection.innerHTML){
+        score += 10
+    }
+    
+    scoreElement.innerHTML = score
     currentQuestion++
     renderQuestions()
+      nextQuestionButton.disabled = true
 }
 
 function checkCorrect(event){
-    console.log(quiz[currentQuestion].correctAnswer)
-    console.log(quiz[currentQuestion].correctAnswer)
-    if (quiz[currentQuestion].correctAnswer == event.target.innerHTML){
-        event.target.style.backgroundColor = "green"
-        event.target.style.color = "white"
-        score += 10
-    } else{
-        event.target.style.backgroundColor = "red"
-        event.target.style.color = "white"
+    event.target.classList.add("active-class")
+   
+    for(var i = 0; i < quizOptions.children.length ; i++ ){
+        if(event.target !== quizOptions.children[i]){
+            quizOptions.children[i].classList.remove("active-class")
+        }
     }
-    scoreElement.innerHTML = score
+
+    currentSelection = event.target
+    nextQuestionButton.disabled = false
+
 }
 
 renderQuestions()

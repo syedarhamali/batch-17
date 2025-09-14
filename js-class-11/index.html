@@ -6,7 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
+<style>
+    .active-class{
+        background-color: blue!important;
+    }
+    .non-active{
+        background-color: white;
+    }
+</style>
 <body>
 
     <div>
@@ -19,7 +26,7 @@
         </ul>
     </div>
     <div id="score" style="font-size: 20px;"></div>
-    <button onclick="goToNext()">Next Question</button>
+    <button onclick="goToNext()" id="nextQuestion" disabled>Next Question</button>
     <script src="index.js"></script>
 </body>
 
