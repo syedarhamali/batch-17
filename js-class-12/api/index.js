@@ -9,7 +9,7 @@ function showProduct(result) {
     products.map((element) => {
         const { thumbnail, price, title, description , id } = element
         cardElementContainer.innerHTML += `
-        <a href='./product.html?id=${id}&name=Arham' target="_blank" >
+        <a href='./product.html?id=${id}&name=Arham' >
         <div id="product-card">
             <div id="product-front">
                 <div class="shadow"></div>

@@ -46,7 +46,7 @@ function showProduct(result) {
           <p><strong>Return Policy:</strong> No return policy</p>
           <p><strong>Minimum Order Quantity:</strong> 48</p>
           
-          <button class="btn btn-success btn-lg mt-2">Add to Cart</button>
+          <button class="btn btn-success btn-lg mt-2" onclick="paymentSuccess()">Add to Cart</button>
         </div>
       </div>
   
@@ -90,3 +90,11 @@ function showProduct(result) {
     </div>`
 
 }
+
+
+
+// function paymentSuccess(){
+//     alert("you payment has been succesfully Done!")
+//     window.location.replace('https://google.com/')
+//     // window.location.href = 'https://google.com/'
+// }
