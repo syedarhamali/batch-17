@@ -3,21 +3,24 @@ function getProducts() {
     fetch("https://dummyjson.com/products").then((response) => response.json()).then((result) => showProduct(result))
 }
 
-function showProduct(result){
-    const {products} = result
+function showProduct(result) {
+    const { products } = result
     let cardElementContainer = document.getElementById('container')
     products.map((element) => {
-        cardElementContainer.innerHTML += `<div id="product-card">
+        const { thumbnail, price, title, description , id } = element
+        cardElementContainer.innerHTML += `
+        <a href='./product.html?id=${id}&name=Arham' target="_blank" >
+        <div id="product-card">
             <div id="product-front">
                 <div class="shadow"></div>
-                <img src=${element.thumbnail} alt="" />
+                <img src=${thumbnail} alt="" />
                 <div class="image_overlay"></div>
                 <div id="view_details">View details</div>
                 <div class="stats">
                     <div class="stats-container">
-                        <span class="product_price">$${element.price}</span>
-                        <span class="product_name">${element.title}</span>
-                        <p>Men's running shirt</p>
+                        <span class="product_price">$${price}</span>
+                        <span class="product_name">${title}</span>
+                        <p>${description}</p>
 
                         <div class="product-options">
                             <strong>SIZES</strong>
@@ -60,7 +63,9 @@ function showProduct(result){
                     <div id="cx"></div>
                 </div>
             </div>
-        </div>`
+        </div> 
+        </a>
+        `
     })
 
 }
