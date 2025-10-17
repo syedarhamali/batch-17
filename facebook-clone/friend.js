@@ -15,11 +15,33 @@ function checkLoggedInUser() {
 checkLoggedInUser()
 
 function findFriend() {
+
     let friendArea = document.getElementById("friends-area")
 
     let friends = users.filter((element) => element.id !== user.id)
+    friendArea.innerHTML = ''
     friends.map((friend) => {
-        friendArea.innerHTML += `<li>${friend.email}  <button onclick="sendRequest(${friend.id})">Add Friend</buttton></li>`
+        let alreadyAdded = friend?.friendRequest?.find((friend) => friend == user.id)
+        if (alreadyAdded) {
+            friendArea.innerHTML += `<li>
+          <img src="https://via.placeholder.com/80" alt="Friend">
+          <div>
+            <h4>${friend.firstName}</h4>
+            <p>Mutual Friends: 5</p>
+            <button>Cancel Request</button>
+          </div>
+        </li>`
+        }
+        else {
+            friendArea.innerHTML += `<li>
+          <img src="https://via.placeholder.com/80" alt="Friend">
+          <div>
+            <h4>${friend.firstName}</h4>
+            <p>Mutual Friends: 5</p>
+            <button onclick="sendRequest(${friend.id})">Add Friend</button>
+          </div>
+        </li>`
+        }
     })
 
 
@@ -27,16 +49,17 @@ function findFriend() {
 
 findFriend();
 
-function sendRequest(friendId){
+function sendRequest(friendId) {
     let friend = users.find((friend) => friend.id === friendId)
-    if(!friend.friendRequest?.length){
+    if (!friend.friendRequest?.length) {
         friend.friendRequest = []
         friend.friendRequest.push(user.id)
-    } else{
+    } else {
         friend.friendRequest.push(user.id)
     }
 
     users[friendId - 1] = friend
 
-    localStorage.setItem('users' , JSON.stringify(users))
+    localStorage.setItem('users', JSON.stringify(users))
+    findFriend()
 }

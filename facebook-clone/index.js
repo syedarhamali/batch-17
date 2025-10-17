@@ -6,6 +6,9 @@ class User {
         this.fullName = firstName + lastName
         this.email = email
         this.password = password
+        this.posts = []
+        this.friends = []
+        this.friendRequest = []
     }
 }
 
