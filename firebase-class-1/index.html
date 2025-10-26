@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase</title>
+</head>
+<body>
+    <form onsubmit="signup(event)" >
+        <fieldset>
+            <legend>Sign up</legend>
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+            <input type="submit" value="Sign up"> 
+        </fieldset>
+    </form>
+
+      <form onsubmit="signin(event)" >
+        <fieldset>
+            <legend>Sign In</legend>
+            <label for="email">Email Address:</label>
+            <input type="email" id="login-email" placeholder="Enter your email" required>
+            <label for="password">Password:</label>
+            <input type="password" id="login-password" placeholder="Enter your password" required>
+            <input type="submit" value="Sign In"> 
+        </fieldset>
+    </form>
+    <button onclick="getUserLogOut()">Log Out</button>
+    <script src="app.js" type="module"></script>
+    <script type="module" src="config.js"></script>
+</body>
+</html>
