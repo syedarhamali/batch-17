@@ -25,7 +25,9 @@ function getUser() {
             // https://firebase.google.com/docs/reference/js/auth.user
             const uid = user.uid;
             console.log("ye user login he abhi", user)
-            // window.location.href = "./dashboard.html"
+            setTimeout(() => {
+                window.location.href = "./dashboard.html"
+            }, 8000);
             // ...
         } else {
             // User is signed out

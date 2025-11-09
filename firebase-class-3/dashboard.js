@@ -33,6 +33,7 @@ function getUser() {
 
 getUser()
 
+
 // small scripts for demo behavior
 document.getElementById('year').textContent = new Date().getFullYear();
 const btn = document.getElementById('mobile-menu-btn');
