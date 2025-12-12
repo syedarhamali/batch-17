@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard UI</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2 class="logo">MyApp</h2>
+        <ul class="menu">
+            <li class="active">Dashboard</li>
+            <li>Friends</li>
+            <li>Chats</li>
+            <li>Settings</li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+
+        <h1>Dashboard</h1>
+
+        <div class="tabs">
+            <button class="tab active" onclick="showTab('friends')">Friends</button>
+            <button class="tab" onclick="showTab('chats')">Chats</button>
+        </div>
+
+        <!-- FRIENDS TAB -->
+        <div class="tab-content" id="friends">
+            <h2>Friends List</h2>
+            <div class="friend-list">
+
+                <div class="friend-card">
+                    <img src="https://via.placeholder.com/50" alt="">
+                    <p>John Doe</p>
+                </div>
+
+                <div class="friend-card">
+                    <img src="https://via.placeholder.com/50" alt="">
+                    <p>Sarah Wilson</p>
+                </div>
+
+                <div class="friend-card">
+                    <img src="https://via.placeholder.com/50" alt="">
+                    <p>Michael Smith</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- CHATS TAB -->
+        <div class="tab-content hidden" id="chats">
+            <h2>Chats</h2>
+
+            <div class="chat-box">
+                <div class="message received">Hey! How are you?</div>
+                <div class="message sent">I am good! What's up?</div>
+                <div class="message received">Nothing much, working on a project.</div>
+
+                <input type="text" placeholder="Type a message..." class="chat-input">
+            </div>
+        </div>
+
+    </main>
+</div>
+
+<script>
+    function showTab(tabName) {
+        document.querySelectorAll(".tab").forEach(btn => btn.classList.remove("active"));
+        event.target.classList.add("active");
+
+        document.querySelectorAll(".tab-content").forEach(tab => tab.classList.add("hidden"));
+        document.getElementById(tabName).classList.remove("hidden");
+    }
+</script>
+
+</body>
+</html>

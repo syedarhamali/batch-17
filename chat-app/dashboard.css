@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body {
+    background: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 250px;
+    background: #222;
+    color: white;
+    padding: 20px;
+}
+
+.logo {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.menu li {
+    list-style: none;
+    padding: 12px 0;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.menu li.active,
+.menu li:hover {
+    opacity: 1;
+    font-weight: bold;
+}
+
+/* MAIN CONTENT */
+.main {
+    flex: 1;
+    padding: 30px;
+}
+
+.tabs {
+    margin: 20px 0;
+}
+
+.tab {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    background: #ddd;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.tab.active {
+    background: #333;
+    color: white;
+}
+
+/* FRIENDS TAB */
+.friend-list {
+    display: flex;
+    gap: 20px;
+}
+
+.friend-card {
+    background: white;
+    width: 150px;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.friend-card img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* CHATS TAB */
+.hidden {
+    display: none;
+}
+
+.chat-box {
+    background: white;
+    height: 300px;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.message {
+    padding: 10px;
+    border-radius: 10px;
+    width: fit-content;
+    max-width: 70%;
+}
+
+.received {
+    background: #e0e0e0;
+}
+
+.sent {
+    background: #333;
+    color: white;
+    align-self: flex-end;
+}
+
+.chat-input {
+    margin-top: auto;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+}
