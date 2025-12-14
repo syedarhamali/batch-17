@@ -1,4 +1,5 @@
-import { auth, signInWithEmailAndPassword } from "./config.js";
+import { auth, onAuthStateChanged, signInWithEmailAndPassword } from "./config.js";
+checkUserState()
 
 window.signIn = (event) => {
     event.preventDefault()
@@ -17,4 +18,22 @@ window.signIn = (event) => {
             const errorCode = error.code;
             const errorMessage = error.message;
         });
+}
+
+function checkUserState() {
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+            // User is signed in, see docs for a list of available properties
+            // https://firebase.google.com/docs/reference/js/auth.user
+            const uid = user.uid;
+            console.log("user mojood hai", uid)
+            window.location.replace("./dashboard.html")
+            // ...
+        } else {
+            console.log("user mojoood nh he")
+            // User is signed out
+            // ...
+        }
+    });
+
 }

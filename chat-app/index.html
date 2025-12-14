@@ -11,16 +11,16 @@
 <body>
     <div class="form-container">
         <p class="title">Sign Up</p>
-        <form class="form" id="signupForm" onsubmit="signUp(event)" >
+        <form class="form" id="signupForm" onsubmit="signUp(event)">
             <div class="input-group">
                 <label for="firstName">First Name</label>
                 <input type="text" name="firstName" required id="firstName" placeholder="">
             </div>
-              <div class="input-group">
+            <div class="input-group">
                 <label for="lastName">Last Name</label>
                 <input type="text" name="lastName" id="lastName" required placeholder="">
             </div>
-              <div class="input-group">
+            <div class="input-group">
                 <label for="email">Email</label>
                 <input type="email" name="email" id="email" required placeholder="">
             </div>
@@ -31,7 +31,16 @@
                     <!-- <a rel="noopener noreferrer" href="#">Forgot Password ?</a> -->
                 </div>
             </div>
-            <button class="sign">Sign Up</button>
+            <button id="signup-btn" class="sign">Sign Up</button>
+            <!-- From Uiverse.io by mobinkakei -->
+            <div class="wrapper" id="loader" style="display: none;">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="shadow"></div>
+                <div class="shadow"></div>
+                <div class="shadow"></div>
+            </div>
         </form>
         <div class="social-message">
             <div class="line"></div>
