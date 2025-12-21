@@ -1,4 +1,4 @@
-import { auth, getDocs, signOut, collection, db, doc, onAuthStateChanged, query, where } from "./config.js";
+import { auth, getDocs, addDoc, signOut, collection, db, doc, onAuthStateChanged, query, where } from "./config.js";
 
 let userId = null
 
@@ -41,12 +41,40 @@ async function getUsers() {
     let friendContainer = document.getElementById("friend-list")
     querySnapshot.forEach((doc) => {
         const userData = doc.data()
+        console.log(userData, "ye wo userUID hai jo login hai")
         friendContainer.innerHTML += `<div class="friend-card" id=${doc.id}>
                     <img src="https://t3.ftcdn.net/jpg/07/24/59/76/360_F_724597608_pmo5BsVumFcFyHJKlASG2Y2KpkkfiYUU.jpg" alt="">
                     <p>${userData.firstName + " " + userData.lastName}</p>
-                    <button>Chat </button>  
+                    <button onclick="checkRoom('${userData.userId}')">Chat </button>  
                 </div>`
 
     });
 
 }
+
+
+window.checkRoom = async (friendId) => {
+ 
+    const userDetails = { [userId]: true, [friendId]: true }
+
+    let roomId = null
+
+    const q = query(collection(db, "chatrooms"), where(`userDetails.${userId}`, "==", true), where(`userDetails.${friendId}`, "==", true));
+
+    const querySnapshot = await getDocs(q);
+    querySnapshot.forEach((doc) => {
+        // doc.data() is never undefined for query doc snapshots
+        console.log(doc.id, " => ", doc.data());
+        roomId = doc.id
+    })
+
+    if (roomId) {
+        window.location.href = `messages.html?roomId=${doc.id}`
+    } else {
+        const docRef = await addDoc(collection(db, "chatrooms"), { userDetails, createdAt: new Date(), ownerId: userId });
+        window.location.href = `messages.html?roomId=${docRef.id}`
+
+    }
+
+}
+
